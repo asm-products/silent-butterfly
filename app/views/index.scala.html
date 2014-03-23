@@ -1,6 +1,40 @@
 @(message: String)
 
 @main("Home") {
+  <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Silent Butterfly</h3>
+              <ul class="nav masthead-nav">
+                <li ng-class="{active: $state.includes('/home')}"><a href="#/home">Home</a></li>
+                <li ng-class="{active: $state.includes('/features')}"><a href="#/features">Features</a></li>
+                <li ng-class="{active: $state.includes('/contact')}"><a href="#/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+
+            <div ui-view="main"></div>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner"> 
+              <p>Copyright 2014 - Silent Butterfly </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
   
 
 }

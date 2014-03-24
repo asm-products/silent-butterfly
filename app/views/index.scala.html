@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="silent-butterfly" ng-controller="AppCtrl">
+    <head>
+      <title> {{pageTitle}} </title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    </head>
+    <body> 
+<div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Silent Butterfly</h3>
+              <ul class="nav masthead-nav">
+                <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
+                <li ng-class="{active: $state.includes('features')}"><a ui-sref="features">Features</a></li>
+                <li ng-class="{active: $state.includes('contact')}"><a ui-sref="contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="inner cover">
+            <div ui-view="main"></div>
+          </div>
+          <div class="mastfoot">
+            <div class="inner"> 
+              <p>Copyright 2014 - Silent Butterfly </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script src="@routes.Assets.at("javascripts/common.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/templates.js")" type="text/javascript"></script>
+   </body>
+</html>
+
